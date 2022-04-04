@@ -43,11 +43,13 @@ const TasksContainer = (props) => {
   const deleteHandler = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
-  //toggle reminder  
+  //toggle reminder
   const toggleReminder = (id) => {
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
+        task.id === id
+          ? { ...task, reminder: !task.reminder }
+          : task
       )
     );
   };
@@ -61,13 +63,15 @@ const TasksContainer = (props) => {
           onClick={onShow}
         />
       </div>
-      <div>{showAddTask && <AddTask onAdd={addTask} />}</div>
+      <div>
+        {showAddTask && <AddTask onAdd={addTask} />}
+      </div>
       {tasks.length > 0
         ? tasks.map((task) => (
             <Task
               key={task.id}
               task={task}
-              deleteHandler={deleteHandler}
+              onDelete={deleteHandler}
               onToggle={toggleReminder}
             />
           ))
