@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "semi": true,
   "trailingComma": "none",
@@ -6,12 +5,3 @@
   "tabWidth": 2,
   "singleQuote": true
 }
-=======
-{
-  "semi": true,
-  "trailingComma": "none",
-  "printWidth": 60,
-  "tabWidth": 2,
-  "singleQuote": true
-}
->>>>>>> 8525d5a47d59e5c6f07d269c8fd325c282bb7ee7
